@@ -1,0 +1,30 @@
+﻿@using HomeWorkLesson2.Models
+@model List<Products>
+
+<h1>Product</h1>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Products Name</th>
+            <th>Price</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (Products item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td><img src="/img/@item.PathImage" /></td>
+
+            </tr>
+        
+        }
+    </tbody>
+</table>
